@@ -9,8 +9,12 @@ const orm = {
 		});
 	},
 
-	insertOne : function(){
-
+	insertOne : function(table, column, value, cb){
+		
+		connection.query("INSERT INTO ?? (??) VALUES (?)", [table, column, value], function(err, result) {
+			if(err) throw err;
+			cb(result);
+		});
 	},
 
 	updateOne : function(){

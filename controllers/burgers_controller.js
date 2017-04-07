@@ -23,7 +23,12 @@ router.get("/", function(req, res) {
 });
 
 router.post("/", function(req, res) {
-    console.log(req.body.burgerInput);
+    const burgerInput = req.body.burgerInput;
+    
+    burger.newBurger(burgerInput, function(result){
+        res.redirect("/");
+
+    })
 });
 
 
