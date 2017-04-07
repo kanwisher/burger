@@ -1,0 +1,9 @@
+body {
+    background-color: gray;
+}
+
+#mainHeading {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}

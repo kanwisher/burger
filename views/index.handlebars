@@ -1,0 +1,28 @@
+<h1 id="mainHeading"> Burger Time </h1>
+
+<ol id="devoured">
+    {{#each burgers}}
+        {{#unless this.devoured}}
+                <li>{{this.burger_name}}</li>
+            </div>
+        {{/unless}}
+    {{/each}}
+</ol>
+
+<ol id="notDevoured">
+    {{#each burgers}}
+        {{#if this.devoured}}
+             <li> {{this.burger_name}} </li>
+        {{/if}}  
+    {{/each}}
+</ol>
+
+<form action="/" method="POST">
+    <textarea name="burgerInput"></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+
+</div>
+
+
