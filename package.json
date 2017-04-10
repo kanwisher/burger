@@ -2,7 +2,7 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "A app where when you click a button, it makes some text about a hamburger, and then you can click a button to make that hamburger text turn into a different text",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
