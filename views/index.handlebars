@@ -1,26 +1,29 @@
 <h1 id="mainHeading"> Burger Time </h1>
+<div id="burgerFlexBox">
+    <div id="devoured">
+            {{#each burgers}}
+                {{#unless this.devoured}}
+                        <p>{{this.burger_name}} <a href="/update/{{this.id}}"><button class="devourButton">Eat Me</button></a></p>
+                        
+                {{/unless}}
+            {{/each}}
 
-<ol id="devoured">
-    {{#each burgers}}
-        {{#unless this.devoured}}
-                <li>{{this.burger_name}}</li>
-                <a href="/update/{{this.id}}"><button class="devourButton">Eat Me</button></a>
-            </div>
-        {{/unless}}
-    {{/each}}
-</ol>
+    </div>
 
-<ol id="notDevoured">
-    {{#each burgers}}
-        {{#if this.devoured}}
-             <li> {{this.burger_name}} </li>
-             <a href="/delete/{{this.id}}"><button class="deleteButton">Delete</button></a>             
-        {{/if}}  
-    {{/each}}
-</ol>
+    <div id="notDevoured">
 
-<form action="/" method="POST">
-    <textarea name="burgerInput"></textarea>
+            {{#each burgers}}
+                {{#if this.devoured}}
+                    <p> {{this.burger_name}} <a href="/delete/{{this.id}}"><button class="deleteButton">Delete</button></a></p>
+                                 
+                {{/if}}
+            {{/each}}
+    </div>
+
+</div>
+
+<form action="/" method="POST" id="burgerForm">
+    <input name="burgerInput" maxlength="25"/>
     <button type="submit">Submit</button>
 </form>
 

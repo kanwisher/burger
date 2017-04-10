@@ -1,24 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: gray;
+    font-family: arial;
 }
+
 
 #mainHeading {
     text-align: center;
     color: white;
-    font-size: 40px;
+    font-size: 50px;
 }
+
+#burgerFlexBox {
+
+     display: -webkit-flex;
+     display: flex;
+     text-align: center;
+     padding-left: 25%;
+     padding-right: 25%;
+}
+
 
 #devoured {
-    float: left;
-    margin-left: 25%;
-}
+    flex: 1 0 0;
+    
 
+}
 #notDevoured {
-    float: left;
-    margin-left: 25%;
-   
+    flex: 1 0 0;
 }
 
-form {
-clear: both;
+.devourButton, .deleteButton {
+    margin-left: 15px;
+}
+
+#burgerForm {
+    text-align: center;
+    padding-top: 50px
 }
