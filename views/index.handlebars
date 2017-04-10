@@ -1,31 +1,36 @@
-<h1 id="mainHeading"> Burger Time </h1>
-<div id="burgerFlexBox">
-    <div id="devoured">
-            {{#each burgers}}
-                {{#unless this.devoured}}
-                        <p>{{this.burger_name}} <a href="/update/{{this.id}}"><button class="devourButton">Eat Me</button></a></p>
-                        
-                {{/unless}}
-            {{/each}}
+<div id="content">
+    <h1 id="mainHeading"> Burger Time </h1>
+    <div id="burgerFlexBox">
+        <div id="devoured">
+            <h2>Ready to Eat</h2>
+                {{#each burgers}}
+                    {{#unless this.devoured}}
+                            <p>{{this.burger_name}} </p>
+                            <a href="/update/{{this.id}}"><button class="devourButton">Eat Me</button></a>
+                            
+                    {{/unless}}
+                {{/each}}
+
+        </div>
+
+        <div id="notDevoured">
+            <h2>Eaten</h2>
+                {{#each burgers}}
+                    {{#if this.devoured}}
+                        <p> {{this.burger_name}} </p>
+                        <a href="/delete/{{this.id}}"><button class="deleteButton">Delete</button></a>
+                                    
+                    {{/if}}
+                {{/each}}
+        </div>
 
     </div>
 
-    <div id="notDevoured">
-
-            {{#each burgers}}
-                {{#if this.devoured}}
-                    <p> {{this.burger_name}} <a href="/delete/{{this.id}}"><button class="deleteButton">Delete</button></a></p>
-                                 
-                {{/if}}
-            {{/each}}
-    </div>
-
+    <form action="/" method="POST" id="burgerForm">
+        <input name="burgerInput" maxlength="25" pattern=".{3,}"  required title="3 characters minimum"/>
+        <button type="submit">Submit</button>
+    </form>
 </div>
-
-<form action="/" method="POST" id="burgerForm">
-    <input name="burgerInput" maxlength="25"/>
-    <button type="submit">Submit</button>
-</form>
 
 
 

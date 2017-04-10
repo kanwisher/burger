@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-	host : 'localhost',
-	user : 'root',
-	password : 'root',
-	database: 'burgers_db'
+	host : 'us-cdbr-iron-east-03.cleardb.net',
+	user : 'bd9433bd4be5b7',
+	password : '06e640c3',
+	database: 'heroku_b92601014a85b80	'
 });
 
 connection.connect(function(err) { //initial connection to app
