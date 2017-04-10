@@ -17,10 +17,21 @@ const orm = {
 		});
 	},
 
-	updateOne : function(){
+	updateOne: function(table, columnAlter, newValue, columnQuery, valueQuery, cb){
 
+		connection.query("UPDATE ?? SET ?? = ? WHERE ?? = ?", [table, columnAlter, newValue, columnQuery, valueQuery], function(err, result) {
+			if(err) throw err;
+			cb(result);
+		});
+	},
+
+	deleteOne: function(table, columnQuery, valueQuery, cb){
+		connection.query("DELETE FROM ?? WHERE ?? = ?", [table, columnQuery, valueQuery], function(err, result) {
+			if(err) throw err;
+			cb(result);
+		});
 	}
-};
+}
 
 
 module.exports = orm;

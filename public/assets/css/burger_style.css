@@ -7,3 +7,18 @@ body {
     color: white;
     font-size: 40px;
 }
+
+#devoured {
+    float: left;
+    margin-left: 25%;
+}
+
+#notDevoured {
+    float: left;
+    margin-left: 25%;
+   
+}
+
+form {
+clear: both;
+}

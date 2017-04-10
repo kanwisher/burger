@@ -14,6 +14,16 @@ const burger = {
         orm.insertOne('burgers', 'burger_name', burger_input, function(res) {
             cb(res);
         });
+    },
+    eatBurger: function(burgerId, cb) {
+        orm.updateOne('burgers', 'devoured', 1, 'id', burgerId, function(res) {
+            cb(res);
+        });
+    },
+    deleteBurger: function(burgerId, cb) {
+        orm.deleteOne('burgers', 'id', burgerId, function(res) {
+            cb(res);
+        });
     }
 
     
