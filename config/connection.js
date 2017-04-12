@@ -6,8 +6,4 @@ const connection = mysql.createPool({
 	database: 'heroku_b92601014a85b80'
 });
 
-connection.getConnection(function(err, connection) { //trying pools since app keeps crashing
-	if (err) throw err;
-});
-
 module.exports = connection; //allow other documents to access this connection
