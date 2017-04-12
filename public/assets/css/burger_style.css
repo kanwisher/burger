@@ -132,16 +132,45 @@ input {
     vertical-align: top;
 }
 
-@media only screen and (max-width: 800px){
-    body{
-        font-size: 3vmax;
+@media  screen and (max-width: 1000px){
+
+     body {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+   
+    #content {
+        width:100%;
+        min-width: 0;
+
+    }
+
+  
+    #devoured{
+        width: 90%;
+
+        
+    }
+    #notDevoured{
+    margin-top: 30px;
+    width: 90%;
+    
+    }
+
+    p {
+        font-size: 1.5em;
+
     }
 
     #mainHeading {
-        font-size: 6vmax;
+        font-size: 2.8em;
     }
 
     input {
-        font-size: 3vmax;
+        font-size: 1em;
+    }
 
 }
