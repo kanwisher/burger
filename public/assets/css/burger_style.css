@@ -49,6 +49,7 @@ body::before {
     margin-top: 5vh;
     border-radius: 1%;
     padding-bottom: 90px;
+    min-width: 500px;
 }
 
 
@@ -61,8 +62,10 @@ body::before {
 
 h2 {
     border: solid white;
+    display: inline-block;
     margin: 20px;
     border-radius: 2%;
+    padding: 20px;
 }
 
 
@@ -120,12 +123,25 @@ p {
 
 input {
     text-align: center;
-    font-size: 1vmax;
+    font-size: 1.5vmax;
 }
 
 #burgerForm {
     text-align: center;
     margin-top: 55px;
-    display: inline-block;
     vertical-align: top;
+}
+
+@media only screen and (max-width: 800px){
+    body{
+        font-size: 3vmax;
+    }
+
+    #mainHeading {
+        font-size: 6vmax;
+    }
+
+    input {
+        font-size: 3vmax;
+
 }
