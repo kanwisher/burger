@@ -1,3 +1,4 @@
+
 <div id="content">
     <h1 id="mainHeading"> Burger Time </h1>
     <div id="burgerFlexBox">
@@ -6,7 +7,7 @@
                 {{#each burgers}}
                     {{#unless this.devoured}}
                             <p>{{this.burger_name}} </p>
-                            <a href="/update/{{this.id}}"><button class="devourButton">Eat Me</button></a>
+                            <a href="/update/{{this.id}}"><button class="devourButton">Eat</button></a>
                             
                     {{/unless}}
                 {{/each}}
@@ -14,7 +15,7 @@
         </div>
 
         <div id="notDevoured">
-            <h2>Eaten</h2>
+            <h2>Consumed</h2>
                 {{#each burgers}}
                     {{#if this.devoured}}
                         <p> {{this.burger_name}} </p>
@@ -27,7 +28,7 @@
     </div>
 
     <form action="/" method="POST" id="burgerForm">
-        <input name="burgerInput" maxlength="25" pattern=".{3,}"  required title="3 characters minimum"/>
+        <input name="burgerInput" maxlength="25" pattern=".{3,}"  required title="3 characters minimum" placeholder="Add a burger"/>
         <button type="submit">Submit</button>
     </form>
 </div>
